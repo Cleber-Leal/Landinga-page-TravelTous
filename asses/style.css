@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+  color: #FFFFFF;
+}
+
+.cabecalho {
+  align-items: center;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../imagens/mapa-mundi.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+.cabecalho .principal {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  width: 100vw;
+}
+.cabecalho .principal .informacoes {
+  text-align: center;
+}
+.cabecalho .principal .informacoes h1 {
+  margin-bottom: 1em;
+}
+.cabecalho .principal .informacoes h1 span {
+  color: #30A2FF;
+}
+.cabecalho .principal .descricao {
+  font-size: 2em;
+  font-weight: 700;
+  line-height: 1.5em;
+}
+.cabecalho .principal .descricao__enfase {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #30A2FF;
+  line-height: 1.5em;
+}
+.cabecalho .principal .formArea {
+  background-color: rgba(233, 233, 240, 0.7);
+  padding: 1em;
+  color: black;
+  margin-bottom: 1em;
+}
+.cabecalho .principal .formArea .descricao__form {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 2em;
+}
+.cabecalho .principal .formArea .formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.cabecalho .principal .formArea .formulario .formulario__grupo {
+  display: flex;
+  flex-direction: column;
+}
+.cabecalho .principal .formArea .formulario .formulario__grupo input {
+  padding: 6px 8px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+.cabecalho .principal .formArea .btn {
+  padding: 0.5em;
+  border: none;
+  border-radius: 5px;
+  color: #FFFFFF;
+  background-color: #30A2FF;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.cabecalho .principal .formArea .btn:hover {
+  background-color: #0264b4;
+}
+
+.cidades {
+  text-align: center;
+}
+.cidades h2 {
+  padding: 0.5em 0;
+  font-size: 2em;
+  color: black;
+}
+.cidades .cidades__secao {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+  width: 100vw;
+  text-align: center;
+}
+.cidades .cidades__secao .cidades__card {
+  padding: 1em;
+}
+.cidades .cidades__secao .cidades__card .cidades__card-imagem {
+  -o-object-fit: contain;
+     object-fit: contain;
+  max-width: 100%;
+}
+.cidades .cidades__secao .cidades__card .cidades__card-nome {
+  color: #30A2FF;
+  font-weight: 700;
+}
+.cidades .cidades__secao .cidades__card .cidades__card-descricao {
+  color: black;
+  font-size: 1.25em;
+}
+
+.rodape {
+  display: flex;
+  height: 150px;
+  align-items: center;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../imagens/mapa-mundi.jpg");
+  background-position: right;
+  background-size: cover;
+  padding: 0.5em;
+}
+.rodape .rodape__inscricao {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+.rodape .rodape__inscricao h3 {
+  color: #FFFFFF;
+  font-size: 1em;
+}
+.rodape .rodape__inscricao .btn {
+  padding: 0.5em;
+  border: none;
+  border-radius: 5px;
+  color: #FFFFFF;
+  background-color: #30A2FF;
+  cursor: pointer;
+  transition: all 0.5s;
+  text-decoration: none;
+}
+.rodape .rodape__inscricao .btn:hover {
+  background-color: #0264b4;
+}
+.rodape .rodape__redes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+.rodape .rodape__redes a {
+  display: flex;
+  text-decoration: none;
+  list-style: none;
+  font-size: 1em;
+  color: #FFFFFF;
+}
+.rodape .rodape__redes a i {
+  margin-right: 1rem;
+}
+
+@media screen and (min-width: 720px) {
+  .cabecalho {
+    height: 80vh;
+  }
+  .cabecalho .principal {
+    flex-direction: row;
+    padding: 2em;
+    justify-content: space-around;
+  }
+  .cabecalho .principal .informacoes {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    max-width: 50%;
+    gap: 1em;
+  }
+  .cabecalho .principal .formArea {
+    max-width: 40%;
+  }
+  .cidades {
+    margin: 3em 0;
+  }
+  .cidades .cidades__secao .cidades__card {
+    display: flex;
+    gap: 0.5em;
+  }
+  .cidades .cidades__secao .cidades__card.um .cidades__card-imagem, .cidades .cidades__secao .cidades__card.tres .cidades__card-imagem {
+    order: 2;
+  }
+  .cidades .cidades__secao .cidades__card.um .cidades__card-textos, .cidades .cidades__secao .cidades__card.tres .cidades__card-textos {
+    order: 1;
+  }
+  .cidades .cidades__secao .cidades__card .cidades__card-imagem {
+    max-width: 50%;
+  }
+  .cidades .cidades__secao .cidades__card .cidades__card-textos {
+    text-align: start;
+  }
+  .rodape {
+    flex-direction: column;
+    justify-content: center;
+    gap: 2em;
+  }
+  .rodape .rodape__inscricao {
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .cabecalho {
+    height: 85vh;
+  }
+  .cabecalho .principal {
+    justify-content: space-around;
+  }
+  .cabecalho .principal .informacoes {
+    max-width: 40%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: start;
+  }
+  .cabecalho .principal .formArea {
+    max-width: 22%;
+    padding: 2em;
+  }
+  .cidades .cidades__texto {
+    margin-bottom: 2em;
+  }
+  .cidades .cidades__secao {
+    width: 80vw;
+    margin: 0 auto;
+  }
+  .cidades .cidades__secao .cidades__card .cidades__card-imagem {
+    max-width: 50%;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.8);
+  }
+}/*# sourceMappingURL=style.css.map */

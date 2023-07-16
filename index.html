@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./asses/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <title>TravelToUs</title>
+
+</head>
+
+<body>
+    <header class="cabecalho">
+        <div class="principal">
+            <div class="informacoes">
+                <h1 class="Logo">Travel<span>To</span>Us</h1>
+                <p class="descricao">Esta pensando em viajar, mas não sabe como se preprarar?</p>
+                <p class="descricao__enfase">A TravelToUs tem todas as informações que precisa!</p>
+            </div>
+            <div class="formArea">
+                <p class="descricao__form">Preencha o formulário para receber mais detalhes.</p>
+                <form class="formulario">
+                    <div class="formulario__grupo">
+                        <label for="name">Nome</label>
+                        <input type="text" name="name" placeholder="Digite seu nome">
+                    </div>
+                    <div class="formulario__grupo">
+                        <label for="email">Email</label>
+                        <input type="email" name="name" placeholder="Digite seu melhor email">
+                    </div>
+                    <div class="formulario__grupo">
+                        <label for="telefone">Telefone</label>
+                        <input type="text" name="telefone" placeholder="Digite seu WhatsApp">
+                    </div>
+                    <div class="formulario__grupo">
+                        <label for="interesse">Principal interesse</label>
+                        <select name="interesse">
+                            <option value="" disabled selected>Selecionar</option>
+                            <option value="visto">Visto</option>
+                            <option value="documentos">Documentos</option>
+                            <option value="vacinas">Vacinas</option>
+                            <option value="valores">Valores</option>
+                        </select>
+                    </div>
+                    <input type="submit" class="btn" value="Quero receber informações">
+                </form>
+            </div>
+        </div>
+    </header>
+    <section class="cidades">
+        <h2 class="cidades__texto">Destinos Frequentes</h2>
+        <div class="cidades__secao">
+            <div class="cidades__card um">
+                <img src="./imagens/Ottawa.jpg" class="cidades__card-imagem" alt="foto da cidade de ottawa no canada">
+                <div class="cidades__card-textos">
+                    <h2 class="cidades__card-nome">Ottawa - CANADÁ</h2>
+                    <p class="cidades__card-descricao">Às margens do rio Ottawa, a cidade abriga a Colina do Parlamento,
+                        com
+                        sua
+                        incrível arquitetura vitoriana, e museus como a National Gallery do Canadá, que exibe coleções
+                        indígenas
+                        e outras obras de arte do país.</p>
+                </div>
+            </div>
+            <div class="cidades__card dois">
+                <img src="./imagens/Dublin.jpg" class="cidades__card-imagem" alt="foto da cidade de dublin na irlanda">
+                <div class="cidades__card-textos">
+                    <h2 class="cidades__card-nome">Dublin - IRLANDA</h2>
+                    <p class="cidades__card-descricao">Dublin, capital da República da Irlanda, fica na costa leste do
+                        país,
+                        na
+                        foz do Rio Liffey. Entre seus prédios históricos destacam-se o Castelo de Dublin, que data do
+                        século
+                        13,
+                        e a imponente Catedral de St Patric
+                        k.</p>
+                </div>
+            </div>
+            <div class="cidades__card tres">
+                <img src="./imagens/Orlando.jpg" class="cidades__card-imagem"
+                    alt="foto da cidade de orlando nos Estados Unidos">
+                <div class=" cidades__card-textos">
+                    <h2 class="cidades__card-nome">Orlando - EUA</h2>
+                    <p class="cidades__card-descricao">Orlando, uma cidade no centro da Flórida, abriga mais de uma
+                        dezena
+                        de
+                        parques temáticos. O mais conhecido é o Walt Disney World, composto por parques como o Magic
+                        Kingdom
+                        e o
+                        Epcot, além de parques aquáticos.</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <footer class="rodape">
+        <div class="rodape__inscricao">
+            <h3 class="">Gostou? Então solicite nossos serviços</h3>
+            <a href="#" for="formArea" class="btn">Solicite Aqui!</a>
+        </div>
+        <div class="rodape__redes">
+            <a href="#"><i class="bi bi-instagram"></i>@TravelToUs</a>
+            <a href="#"><i class="bi bi-envelope"></i>contato@traveltous.com</a>
+        </div>
+    </footer>
+    <script src="./script/main.js"></script>
+</body>
+
+</html>

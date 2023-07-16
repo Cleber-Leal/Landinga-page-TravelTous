@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin estiloBotao () {
+        padding: .5em;
+        border: none;
+        border-radius: 5px;
+        color: $texto;
+        background-color: $corBotao ;
+        cursor: pointer;
+        transition: all .5s;
+
+        &:hover {
+            background-color: $botaoHover;
+        }
+}
+
+$corTextoDestacado: #30A2FF;
+$texto: #FFFFFF;
+$corHover: #CA4E79;
+$corBotao: #30A2FF;
+$botaoHover: #0264b4;
+$textoSecundario: black;
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    color: $texto;
+}
+
+
+
+.cabecalho {
+    align-items: center;
+    background-image:
+        linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+        url('../imagens/mapa-mundi.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+
+    .principal {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1em;
+        width: 100vw;
+
+        .informacoes {
+            text-align: center;
+
+            h1 {
+                margin-bottom: 1em;
+
+                span {
+                    color: $corTextoDestacado;
+                }
+            }
+        }
+
+        .descricao {
+            font-size: 2em;
+            font-weight: 700;
+            line-height: 1.5em;
+        }
+
+        .descricao__enfase {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: $corTextoDestacado;
+            line-height: 1.5em;
+        }
+
+        .formArea {
+            background-color: rgba(233, 233, 240, 0.7);
+            padding: 1em;
+            color: $textoSecundario;
+            margin-bottom: 1em;
+
+
+            .descricao__form {
+                font-size: 1.5em;
+                font-weight: bold;
+                margin-bottom: 2em;
+            }
+
+            .formulario {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                .formulario__grupo {
+                    display: flex;
+                    flex-direction: column;
+
+                    input {
+                        padding: 6px 8px;
+                        border: none;
+                        border-radius: 5px;
+                        outline: none;
+
+                    }
+                }
+
+            }
+
+            .btn {
+               @include estiloBotao();
+            }
+
+        }
+    }
+}
+
+.cidades {
+    text-align: center;
+    
+    h2 {
+        padding: .5em 0;
+        font-size: 2em;
+        color: $textoSecundario;
+    }
+    .cidades__secao {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1em;
+        width: 100vw;
+        text-align: center;
+
+
+        .cidades__card {
+            padding: 1em;
+
+            .cidades__card-imagem {
+                object-fit: contain;
+                max-width: 100%;
+            }
+
+            .cidades__card-nome {
+                color: $corTextoDestacado;
+                font-weight: 700;
+            }
+
+            .cidades__card-descricao {
+                color: $textoSecundario ;
+                font-size: 1.25em;
+            }
+
+        }
+
+    }
+}
+
+.rodape {
+    display: flex;
+    height: 150px;
+    align-items: center;
+    background-image:
+        linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+        url('../imagens/mapa-mundi.jpg');
+        background-position: right;
+    background-size: cover;
+    padding: .5em;
+ 
+
+    .rodape__inscricao {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1em;
+        h3 {
+            color: $texto;
+            font-size: 1em;
+        }
+        .btn {
+            @include estiloBotao();
+            text-decoration: none;
+        }
+    }
+
+    .rodape__redes {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1em;
+        a {
+            display: flex;
+            text-decoration: none;
+            list-style: none;
+            font-size: 1em;
+            color: $texto;
+
+            i {
+                margin-right: 1rem;
+            }
+        }
+
+    
+    }
+    
+}
+
+
+@media screen and (min-width:720px) {
+    .cabecalho {
+        height: 80vh;
+
+        .principal {
+            flex-direction: row;
+            padding: 2em;
+            justify-content: space-around;
+
+            .informacoes {
+                display: flex;
+                flex-direction: column;
+                text-align: start;
+                max-width: 50%;
+                gap: 1em;
+            }
+
+            .formArea {
+                max-width: 40%;
+            }
+        }
+    }
+
+    .cidades {
+        margin: 3em 0;
+        .cidades__secao {
+            .cidades__card {
+                display: flex;
+                gap: .5em;
+                &.um, &.tres{
+                    .cidades__card-imagem {
+                        order: 2;
+                    }
+
+                    .cidades__card-textos {
+                        order: 1;
+                    }
+                }
+                .cidades__card-imagem {
+                    max-width: 50%;
+                }
+                .cidades__card-textos {
+                    text-align: start;
+                }
+            }
+
+        }
+    }
+
+    .rodape {
+        flex-direction: column;
+        justify-content: center;
+        gap: 2em;
+        .rodape__inscricao {
+            align-items: center;
+        }
+    }
+
+}
+
+@media screen and (min-width:1024px) {
+    .cabecalho {
+        height: 85vh;
+
+
+        .principal {
+            justify-content: space-around;
+
+            .informacoes {
+                max-width: 40%;
+                flex-direction: row;
+                flex-wrap: wrap;
+                text-align: start;
+            }
+
+            .formArea {
+                max-width: 22%;
+                padding: 2em;
+            }
+        }
+    }
+
+    .cidades {
+        
+        .cidades__texto {
+            margin-bottom: 2em;
+        }
+
+        .cidades__secao {
+            width: 80vw;
+            margin: 0 auto;
+
+            .cidades__card {
+                .cidades__card-imagem {
+                    max-width: 50%;
+                    box-shadow: 0px 10px  10px rgba(0, 0, 0, 0.8);
+                }
+
+             
+            }
+        }
+    }
+
+}
